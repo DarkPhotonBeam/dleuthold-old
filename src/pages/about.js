@@ -5,8 +5,9 @@ import Layout from "../components/Layout/Layout";
 export default function AboutPage() {
     return (
         <Layout>
-            <section className={'hero'}>
-                <h1>About.</h1>
+            <section>
+                <h1>About</h1>
+                <p></p>
             </section>
         </Layout>
     )

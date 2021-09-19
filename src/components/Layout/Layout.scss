@@ -29,7 +29,13 @@
     list-style: none;
 
     > li {
-      a {
+      > a {
+        font-size: 1.5rem;
+        position: relative;
+        padding: 1rem 0;
+        transition: transform 100ms ease-in-out;
+        display: inline-block;
+
         &::before {
           content: '>';
           position: absolute;
@@ -49,10 +55,9 @@
       }
 
       //margin: 1rem 0;
-      padding: 1rem 0;
-      font-size: 1.5rem;
-      position: relative;
-      transition: transform 100ms ease-in-out;
+
+
+
 
 
     }

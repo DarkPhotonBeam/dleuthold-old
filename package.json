@@ -13,7 +13,8 @@
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "scp -r public/* dleuthold@slab1.ethz.ch:~/homepage/"
+    "deploy": "scp -r public/* dleuthold@slab1.ethz.ch:~/homepage/",
+    "prod": "yarn build && yarn deploy"
   },
   "dependencies": {
     "gatsby": "^3.13.1",

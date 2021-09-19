@@ -5,8 +5,11 @@ import Layout from "../components/Layout/Layout";
 export default function ContactPage() {
     return (
         <Layout>
-            <section className={'hero'}>
-                <h1>Contact.</h1>
+            <section className={'center'}>
+                <h1>Contact</h1>
+                <div className={'flex'}>
+                    <span><a href={'mailto:dleuthold@student.ethz.ch'}>dleuthold@student.ethz.ch</a></span>
+                </div>
             </section>
         </Layout>
     )
