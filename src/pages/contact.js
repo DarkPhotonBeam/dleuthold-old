@@ -1,10 +1,12 @@
 import * as React from "react"
 import Layout from "../components/Layout/Layout";
+import {Helmet} from "react-helmet";
 
 // markup
 export default function ContactPage() {
     return (
         <Layout>
+            <Helmet title={'Contact'} />
             <section className={'center'}>
                 <h1>Contact</h1>
                 <div className={'flex'}>
