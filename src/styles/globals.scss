@@ -1,0 +1,90 @@
+@import 'mixins.scss';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $ff-text;
+}
+
+body {
+  background: $c-bg;
+  color: $c-text;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $ff-headers;
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-bottom: 1.75rem;
+}
+
+h3 {
+  margin-bottom: 1.5rem;
+}
+
+h4 {
+  margin-bottom: 1.25rem;
+}
+
+h5 {
+  margin-bottom: 1rem;
+}
+
+h6 {
+  margin-bottom: .75rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mh-100 {
+  min-height: 100vh;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  h1 {
+    font-size: 4rem;
+    animation: heroIntro 1000ms ease-in-out;
+  }
+}
+
+@keyframes heroIntro {
+  from {
+    transform: scale(1.1);
+    opacity: 0;
+    letter-spacing: 8px;
+  }
+
+  to {
+    transform: scale(1.0);
+    opacity: 1.0;
+    letter-spacing: 4px;
+  }
+}

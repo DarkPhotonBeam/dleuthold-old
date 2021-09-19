@@ -1,11 +1,14 @@
 import * as React from "react"
+import Layout from "../components/Layout/Layout";
 
 // markup
 const IndexPage = () => {
     return (
-        <main>
-
-        </main>
+        <Layout>
+            <section className={'hero'}>
+                <h1>Hello.</h1>
+            </section>
+        </Layout>
     )
 }
 

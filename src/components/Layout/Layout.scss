@@ -1,0 +1,61 @@
+
+
+.nav {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+
+  .hamburger-react {
+    position: fixed;
+    top: 4rem;
+    left: calc(4rem - 8px);
+  }
+
+  ul {
+    list-style: none;
+
+    > li {
+      //margin: 1rem 0;
+      padding: 1rem 0;
+      font-size: 1.5rem;
+      position: relative;
+      transition: transform 100ms ease-in-out;
+
+      &::before {
+        content: '>';
+        position: absolute;
+        right: calc(100% + .5rem);
+        transform: scale(0);
+        transition: transform 100ms ease-in-out;
+      }
+
+      &:active, &:hover, &.active {
+        cursor: pointer;
+        transform: translateX(.5rem);
+
+        &::before {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  min-height: 100vh;
+
+  > section {
+    max-width: 80ch;
+    padding: 4rem 0;
+  }
+}
