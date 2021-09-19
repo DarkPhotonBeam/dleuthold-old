@@ -1,6 +1,7 @@
 module.exports = {
+  pathPrefix: '/~dleuthold',
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://n.ethz.ch/~dleuthold",
     title: "client",
   },
   plugins: [

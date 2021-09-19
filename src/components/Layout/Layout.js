@@ -3,15 +3,18 @@ import '../../styles/globals.scss';
 import './Layout.scss';
 import Hamburger from 'hamburger-react';
 import {useState} from "react";
+import {Link} from "gatsby";
 
 export default function Layout({children}) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <>
-            <aside className={'nav'}>
+            <div className={'hamburger'}>
                 <Hamburger className={'nav_hamburger'} toggled={isOpen} toggle={setIsOpen} />
-                <ul className={isOpen ? 'open' : ''}>
+            </div>
+            <aside className={`nav ${isOpen ? 'open' : ''}`}>
+                <ul>
                     <NavItem name={'home'} path={'/'} />
                     <NavItem name={'files'} path={'/files'} />
                     <NavItem name={'about'} path={'/about'} />
@@ -31,6 +34,6 @@ export default function Layout({children}) {
 function NavItem({name, path}) {
 
     return (
-        <li><a className={'' === path ? 'active' : ''} href={path}>{name}</a></li>
+        <li><Link activeClassName={'active'} className={'' === path ? 'active' : ''} to={path}>{name}</Link></li>
     );
 }
