@@ -9,7 +9,7 @@ export default function Layout({children}) {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-        setIsOpen(JSON.parse(localStorage.getItem('menuOpen')) || false);
+        //setIsOpen(JSON.parse(localStorage.getItem('menuOpen')) || false);
     }, []);
 
     useEffect(() => {
