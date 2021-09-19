@@ -6,7 +6,7 @@ import {Helmet} from "react-helmet";
 export default function ProjectsPage() {
     return (
         <Layout>
-            <Helmet title={'Projects'} />
+            <Helmet title={'Projects - Daniel Leuthold'} />
             <section className={'center'}>
                 <h1>Projects</h1>
             </section>

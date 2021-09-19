@@ -6,7 +6,7 @@ import {Helmet} from "react-helmet";
 export default function AboutPage() {
     return (
         <Layout>
-            <Helmet title={'About'} />
+            <Helmet title={'About - Daniel Leuthold'} />
             <section>
                 <h1>About</h1>
             </section>

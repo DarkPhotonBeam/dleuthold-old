@@ -6,7 +6,7 @@ import {Helmet} from "react-helmet";
 export default function FilesPage() {
     return (
         <Layout>
-            <Helmet title={'Files'} />
+            <Helmet title={'Files - Daniel Leuthold'} />
             <section className={'center'}>
                 <h1>Files</h1>
             </section>

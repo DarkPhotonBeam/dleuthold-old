@@ -6,7 +6,7 @@ import {Helmet} from "react-helmet";
 export default function MusicPage() {
     return (
         <Layout>
-            <Helmet title={'Music'} />
+            <Helmet title={'Music - Daniel Leuthold'} />
             <section className={'center'}>
                 <h1>Music</h1>
             </section>

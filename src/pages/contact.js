@@ -6,7 +6,7 @@ import {Helmet} from "react-helmet";
 export default function ContactPage() {
     return (
         <Layout>
-            <Helmet title={'Contact'} />
+            <Helmet title={'Contact - Daniel Leuthold'} />
             <section className={'center'}>
                 <h1>Contact</h1>
                 <div className={'flex'}>
