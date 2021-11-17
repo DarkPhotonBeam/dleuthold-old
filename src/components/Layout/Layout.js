@@ -24,7 +24,9 @@ export default function Layout({children}) {
             <aside className={`nav ${isOpen ? 'open' : ''}`}>
                 <ul>
                     <NavItem name={'home'} path={'/'} />
-                    <NavItem name={'projects'} path={'/projects'} />
+                    <NavItem name={'tools'} path={'/tools'}>
+                        <NavItem name={'bqm-pitcher-calculator'} path={'/tools/bqm-pitcher-calculator'} />
+                    </NavItem>
                     <NavItem name={'music'} path={'/music'} />
                     <NavItem name={'files'} path={'/files'} />
                     {/*<NavItem name={'about'} path={'/about'} />*/}
@@ -41,9 +43,16 @@ export default function Layout({children}) {
     );
 }
 
-function NavItem({name, path}) {
+function NavItem({name, path, children}) {
 
     return (
-        <li><Link activeClassName={'active'} className={'' === path ? 'active' : ''} to={path}>{name}</Link></li>
+        <li>
+            <Link activeClassName={'active'} className={'' === path ? 'active' : ''} to={path}>{name}</Link>
+            {children ? (
+                <ul>
+                    {children}
+                </ul>
+            ) : ''}
+        </li>
     );
 }

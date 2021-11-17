@@ -3,12 +3,12 @@ import Layout from "../components/Layout/Layout";
 import {Helmet} from "react-helmet";
 
 // markup
-export default function ProjectsPage() {
+export default function ToolsPage() {
     return (
         <Layout>
-            <Helmet title={'Projects - Daniel Leuthold'} />
+            <Helmet title={'Tools - Daniel Leuthold'} />
             <section className={'center'}>
-                <h1>Projects</h1>
+                <h1>Tools</h1>
             </section>
         </Layout>
     )

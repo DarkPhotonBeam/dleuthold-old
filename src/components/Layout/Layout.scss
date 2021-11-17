@@ -2,9 +2,20 @@
 
 .hamburger {
   position: fixed !important;
-  top: 4rem;
+  //top: 1rem;
+  top: 0;
+
   z-index: 1000;
-  left: calc(4rem - 8px);
+  //left: calc(2rem - 8px);
+  left: 0;
+  background: $c-bg;
+  padding: 1rem calc(2rem - 8px);
+  width: 100%;
+
+  @include res('lg') {
+    top: 4rem;
+    left: calc(4rem - 8px);
+  }
 }
 
 .nav {
@@ -16,7 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem;
+  padding: 2rem;
   transition: transform 250ms ease-in-out;
   background: rgba($c-bg, 0.85);
 
@@ -26,12 +37,24 @@
     transform: translateX(0);
   }
 
-
+  @include res('lg') {
+    padding: 4rem;
+  }
 
   ul {
     list-style: none;
 
     > li {
+
+      li {
+        margin-left: 1rem;
+
+        > a {
+          font-size: 1rem;
+          padding-top: 0;
+        }
+      }
+
       > a {
         font-size: 1.5rem;
         position: relative;
@@ -73,10 +96,11 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  min-height: 100vh;
+  //min-height: calc(100vh - 4rem);
+  //padding: 4rem 0;
 
   > section {
     max-width: 80ch;
-    padding: 4rem 0;
+    padding: 6rem 2rem;
   }
 }
