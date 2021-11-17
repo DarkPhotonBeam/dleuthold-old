@@ -27,8 +27,11 @@ export default function Layout({children}) {
                     <NavItem name={'tools'} path={'/tools'}>
                         <NavItem name={'bqm-pitcher-calculator'} path={'/tools/bqm-pitcher-calculator'} />
                     </NavItem>
+                    <NavItem name={'games'} path={'/games'}>
+                        <NavItem name={'tic-tac-toe'} path={'/games/tic-tac-toe'} />
+                    </NavItem>
                     <NavItem name={'music'} path={'/music'} />
-                    <NavItem name={'files'} path={'/files'} />
+                    {/*<NavItem name={'files'} path={'/files'} />*/}
                     {/*<NavItem name={'about'} path={'/about'} />*/}
                     <NavItem name={'contact'} path={'/contact'} />
                 </ul>
