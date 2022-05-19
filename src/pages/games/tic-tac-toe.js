@@ -49,13 +49,15 @@ function TicTacToe() {
     }, [size]);
 
     const reset = (swapTurn = true) => {
+        console.log('RESET');
+        //if (swapTurn) setTurn(turn === 'X' ? 'O' : 'X');
         initFields();
-        if (swapTurn) setTurn(turn === 'X' ? 'O' : 'X');
         setGameOver(false);
         setWinner('');
     };
 
     const initFields = () => {
+        console.log('Init Fields');
         // Rebuild Fields
         const _fields = [];
         for (let y = 0; y < size; y++) {
@@ -108,7 +110,7 @@ function TicTacToe() {
                     __win = false;
                     break;
                 } else {
-                    winningFields.push(_fields[i][i]);
+                    winningFields.push(_fields[i][size - 1 - i]);
                 }
             }
             _win = __win;
@@ -170,8 +172,8 @@ function TicTacToe() {
     };
 
     useEffect(() => {
-        if (fields.length > 0) checkWin();
-    }, [fields]);
+        if (fields.length > 0 && !gameOver) checkWin();
+    }, [fields, gameOver]);
 
     const updateField = (x, y, state) => {
         const _fields = [...fields];
