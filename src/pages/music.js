@@ -31,6 +31,9 @@ export default function MusicPage() {
                         <a target={'_blank'} href={'https://music.apple.com/us/artist/dark-photon/1301484073'}>Apple Music</a>
                     </li>
                     <li>
+                        <a target={'_blank'} href={'https://darkphoton.bandcamp.com/'}>Bandcamp</a>
+                    </li>
+                    <li>
                         <a target={'_blank'} href={'https://soundcloud.com/darkphotonbeam'}>Soundcloud</a>
                     </li>
                 </ul>
