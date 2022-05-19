@@ -28,6 +28,7 @@ export default function Layout({children}) {
                         <NavItem name={'bqm-pitcher-calculator'} path={'/tools/bqm-pitcher-calculator'} />
                     </NavItem>
                     <NavItem name={'games'} path={'/games'}>
+                        <li><a target={'_blank'} href={'https://connectx.darkphotonbeam.com'}>Connect X</a></li>
                         <NavItem name={'tic-tac-toe'} path={'/games/tic-tac-toe'} />
                     </NavItem>
                     <NavItem name={'music'} path={'/music'} />
