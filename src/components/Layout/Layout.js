@@ -5,7 +5,7 @@ import Hamburger from 'hamburger-react';
 import {useEffect, useState} from "react";
 import {Link} from "gatsby";
 
-export default function Layout({children}) {
+export default function Layout({children, hideHamburger}) {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
@@ -18,9 +18,13 @@ export default function Layout({children}) {
 
     return (
         <>
-            <div className={'hamburger'}>
-                <Hamburger className={'nav_hamburger'} toggled={isOpen} toggle={setIsOpen} />
-            </div>
+            {
+                hideHamburger ? '' : (
+                    <div className={'hamburger'}>
+                        <Hamburger className={'nav_hamburger'} toggled={isOpen} toggle={setIsOpen} />
+                    </div>
+                )
+            }
             <aside className={`nav ${isOpen ? 'open' : ''}`}>
                 <ul>
                     <NavItem name={'home'} path={'/'} />

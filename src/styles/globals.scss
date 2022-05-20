@@ -247,3 +247,35 @@ button {
 .hidden {
   display: none;
 }
+
+.tweak {
+  animation: tweak 100ms linear infinite;
+}
+
+.ben {
+  animation: tweak 100ms linear infinite, deepFry 10s linear 0s 1 forwards;
+}
+
+@keyframes deepFry {
+  0% {
+    filter: saturate(100%);
+  }
+
+  100% {
+    filter: saturate(3207%);
+  }
+}
+
+@keyframes tweak {
+  0% {
+    transform: scale(1.0);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}
